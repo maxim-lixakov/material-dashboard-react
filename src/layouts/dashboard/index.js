@@ -12,7 +12,7 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-
+import React, { useEffect, useState } from "react";
 // @mui material components
 import Grid from "@mui/material/Grid";
 
@@ -37,6 +37,21 @@ import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
+  const [rows, setRows] = useState("");
+
+  useEffect(() => {
+    const url = "http://217.25.88.87:1337/api/data_info";
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url);
+        const json = await response.json();
+        setRows(json.rows);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <DashboardLayout>
@@ -48,11 +63,11 @@ function Dashboard() {
               <ComplexStatisticsCard
                 color="dark"
                 icon="weekend"
-                title="Bookings"
-                count={281}
+                title="Items collected"
+                count={rows}
                 percentage={{
                   color: "success",
-                  amount: "+55%",
+                  amount: `+${rows}%`,
                   label: "than lask week",
                 }}
               />

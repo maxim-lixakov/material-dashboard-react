@@ -14,66 +14,63 @@ Coded by www.creative-tim.com
 */
 
 // Images
-import kal from "assets/images/kal-visuals-square.jpg";
-import marie from "assets/images/marie.jpg";
-import ivana from "assets/images/ivana-square.jpg";
-import team3 from "assets/images/team-3.jpg";
-import team4 from "assets/images/team-4.jpg";
+import max from "assets/images/max1.jpeg";
+import ilyas from "assets/images/ilyas.jpeg";
+import empty from "assets/images/empty.jpg";
+// import roma from "assets/images/max.jpeg";
+// import artem from "assets/images/max.jpeg";
+// import semyon from "assets/images/max.jpeg";
 
 export default [
   {
-    image: kal,
-    name: "Sophie B.",
-    description: "Hi! I need more information..",
+    image: max,
+    name: "Ликсаков Максим",
+    description: "разработчик",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "reply",
+      label: "mvliksakov@edu.hse.ru",
     },
   },
   {
-    image: marie,
-    name: "Anne Marie",
-    description: "Awesome work, can you..",
+    image: ilyas,
+    name: "Гасанов Ильяс",
+    description: "разработчик",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "reply",
     },
   },
   {
-    image: ivana,
-    name: "Ivanna",
-    description: "About files I can..",
+    image: empty,
+    name: "Зарьянов Роман",
+    description: "аналитик",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "reply",
     },
   },
   {
-    image: team4,
-    name: "Peterson",
-    description: "Have a great afternoon..",
+    image: empty,
+    name: "Ордин Семен",
+    description: "аналитик",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "reply",
     },
   },
   {
-    image: team3,
-    name: "Nick Daniel",
-    description: "Hi! I need more information..",
+    image: empty,
+    name: "Федонин Артем",
+    description: "бизнес-аналитик",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "reply",
     },
   },
 ];
